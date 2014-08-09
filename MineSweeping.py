@@ -21,13 +21,13 @@ class MineSweeping():
         self.SCORE = 0 #扫雷得分
         self.MineNum = 15 #地雷总数
         self.xy_list= [[0,0,0,0,0,0,0,0],
-                         [0,0,0,0,0,0,0,0],
-                         [0,0,0,0,0,0,0,0],
-                         [0,0,0,0,0,0,0,0],
-                         [0,0,0,0,0,0,0,0],
-                         [0,0,0,0,0,0,0,0],
-                         [0,0,0,0,0,0,0,0],
-                         [0,0,0,0,0,0,0,0]]
+                       [0,0,0,0,0,0,0,0],
+                       [0,0,0,0,0,0,0,0],
+                       [0,0,0,0,0,0,0,0],
+                       [0,0,0,0,0,0,0,0],
+                       [0,0,0,0,0,0,0,0],
+                       [0,0,0,0,0,0,0,0],
+                       [0,0,0,0,0,0,0,0]]
         
         
     def iniData(self):
@@ -130,7 +130,7 @@ class MineSweeping():
             x = self.getX() 
             y = self.getY()
             while(2 == self.checkMine(x,y)):
-                print 'values of x,y had inputed,please input new values!'
+                print 'values of x,y had inputed, please input new values!'
                 x = self.getX()
                 y = self.getY()
             if 1 == self.checkMine(x,y):
@@ -162,14 +162,14 @@ class MineSweeping():
             print '+======================+'
             print '+      Game Start      +'
             print '+======================+'
-            print '*-----------------*'
+            print '*-0-1-2-3-4-5-6-7-*'
             for i in range(self.LINE):
                 print '| 1 1 1 1 1 1 1 1 |'
-            print '*-----------------*'
+            print '*-0-1-2-3-4-5-6-7-*'
             print 'Please input values of x,y(0-7):'
         elif kind==2:
             #输出已经清扫位置
-            print '*-----------------*'
+            print '*-0-1-2-3-4-5-6-7-*'
             for i in range(self.LINE):
                 sys.stdout.write('| ')
                 for k in range(self.ROW):
@@ -178,11 +178,11 @@ class MineSweeping():
                     else:
                         sys.stdout.write('1 ')
                 print '|'
-            print '*-----------------*'
+            print '*-0-1-2-3-4-5-6-7-*'
             print 'Please input values of x,y(0-7):'           
         else:
             #输出所有的地雷与已经清扫位置
-            print '*-----------------*'
+            print '*-0-1-2-3-4-5-6-7-*'
             for i in range(self.LINE):
                 sys.stdout.write('| ')
                 for k in range(self.ROW):
@@ -193,7 +193,7 @@ class MineSweeping():
                     else:
                         sys.stdout.write('1 ')
                 print '|'
-            print '*-----------------*'
+            print '*-0-1-2-3-4-5-6-7-*'
             
         
 
