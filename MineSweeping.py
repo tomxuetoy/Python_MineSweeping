@@ -58,12 +58,12 @@ class MineSweeping():
            @type : int
         '''
         
-        sys.stdout.write('X=')
+        sys.stdout.write('Y=')
         xRet = raw_input()
         while xRet=='' or (False == self.isNumber(xRet))\
              or 0>int(xRet) or int(xRet)>self.ROW:
             print 'Wrong number!(please input 0-7)'
-            sys.stdout.write('X=')
+            sys.stdout.write('Y=')
             xRet = raw_input()
         return int(xRet)
         
@@ -74,12 +74,12 @@ class MineSweeping():
            @type : int
         '''
         
-        sys.stdout.write('Y=')
+        sys.stdout.write('X=')
         yRet = raw_input()
         while yRet=='' or (False == self.isNumber(yRet))\
              or 0>int(yRet) or int(yRet)>self.LINE:
             print 'Wrong number!(please input 0-7)'
-            sys.stdout.write('Y=')
+            sys.stdout.write('X=')
             yRet = raw_input()
         return int(yRet)
     
@@ -127,12 +127,12 @@ class MineSweeping():
         #print self.xy_list
         
         while(1):
-            x = self.getX() 
             y = self.getY()
+            x = self.getX() 
             while(2 == self.checkMine(x,y)):
                 print 'values of x,y had inputed, please input new values!'
-                x = self.getX()
                 y = self.getY()
+                x = self.getX()
             if 1 == self.checkMine(x,y):
                 self.end()
                 break
@@ -162,29 +162,29 @@ class MineSweeping():
             print '+======================+'
             print '+      Game Start      +'
             print '+======================+'
-            print '*-0-1-2-3-4-5-6-7-*'
+            print '*--0-1-2-3-4-5-6-7--*'
             for i in range(self.LINE):
-                print '| 1 1 1 1 1 1 1 1 |'
-            print '*-0-1-2-3-4-5-6-7-*'
+                print i, ' 1 1 1 1 1 1 1 1 ', i
+            print '*--0-1-2-3-4-5-6-7--*'
             print 'Please input values of x,y(0-7):'
         elif kind==2:
             #输出已经清扫位置
-            print '*-0-1-2-3-4-5-6-7-*'
+            print '*--0-1-2-3-4-5-6-7--*'
             for i in range(self.LINE):
-                sys.stdout.write('| ')
+                sys.stdout.write('|  ')
                 for k in range(self.ROW):
                     if 2 == self.xy_list[i][k]:
                         sys.stdout.write('0 ')
                     else:
                         sys.stdout.write('1 ')
-                print '|'
-            print '*-0-1-2-3-4-5-6-7-*'
+                print ' ', i
+            print '*--0-1-2-3-4-5-6-7--*'
             print 'Please input values of x,y(0-7):'           
         else:
             #输出所有的地雷与已经清扫位置
-            print '*-0-1-2-3-4-5-6-7-*'
+            print '*--0-1-2-3-4-5-6-7--*'
             for i in range(self.LINE):
-                sys.stdout.write('| ')
+                sys.stdout.write('|  ')
                 for k in range(self.ROW):
                     if 2 == self.xy_list[i][k]:
                         sys.stdout.write('0 ')
@@ -192,8 +192,8 @@ class MineSweeping():
                         sys.stdout.write('X ')
                     else:
                         sys.stdout.write('1 ')
-                print '|'
-            print '*-0-1-2-3-4-5-6-7-*'
+                print ' ', i
+            print '*--0-1-2-3-4-5-6-7--*'
             
         
 
