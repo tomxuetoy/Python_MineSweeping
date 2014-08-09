@@ -164,7 +164,7 @@ class MineSweeping():
             print '+======================+'
             print '*--0-1-2-3-4-5-6-7--*'
             for i in range(self.LINE):
-                print i, ' 1 1 1 1 1 1 1 1 ', i
+                print i, ' ? ? ? ? ? ? ? ? ', i
             print '*--0-1-2-3-4-5-6-7--*'
             print 'Please input values of x,y(0-7):'
         elif kind==2:
@@ -176,7 +176,7 @@ class MineSweeping():
                     if 2 == self.xy_list[i][k]:
                         sys.stdout.write('0 ')
                     else:
-                        sys.stdout.write('1 ')
+                        sys.stdout.write('? ')
                 print ' ', i
             print '*--0-1-2-3-4-5-6-7--*'
             print 'Please input values of x,y(0-7):'           
@@ -191,7 +191,7 @@ class MineSweeping():
                     elif 1== self.xy_list[i][k]:
                         sys.stdout.write('X ')
                     else:
-                        sys.stdout.write('1 ')
+                        sys.stdout.write('? ')
                 print ' ', i
             print '*--0-1-2-3-4-5-6-7--*'
             
