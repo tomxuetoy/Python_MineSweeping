@@ -182,9 +182,9 @@ class MineSweeping():
            @type:int
         '''
         
+        clr = Color()
+
         if kind==1:
-            clr = Color()
-            clr.print_red_text('red')
             print '+===================================+'
             print '+             Game Start            +'
             print '+===================================+'
@@ -201,7 +201,7 @@ class MineSweeping():
                 print '%x  ' %(i),
                 for k in range(self.ROW):
                     if 2 == self.xy_list[i][k]:
-                        sys.stdout.write('0 ')
+                        clr.print_green_text('0 ')
                     else:
                         sys.stdout.write('? ')
                 print
@@ -215,9 +215,9 @@ class MineSweeping():
                 print '%x  ' %(i),
                 for k in range(self.ROW):
                     if 2 == self.xy_list[i][k]:
-                        sys.stdout.write('0 ')
+                        clr.print_green_text('0 ')
                     elif 1== self.xy_list[i][k]:
-                        sys.stdout.write('X ')
+                        clr.print_red_text('X ')
                     else:
                         sys.stdout.write('? ')
                 print
@@ -243,22 +243,22 @@ class Color:
       
     def print_red_text(self, print_text):  
         self.set_cmd_color(FOREGROUND_RED | FOREGROUND_INTENSITY)  
-        print print_text  
+        print print_text,
         self.reset_color()  
           
     def print_green_text(self, print_text):  
         self.set_cmd_color(FOREGROUND_GREEN | FOREGROUND_INTENSITY)  
-        print print_text  
+        print print_text,
         self.reset_color()  
       
     def print_blue_text(self, print_text):   
         self.set_cmd_color(FOREGROUND_BLUE | FOREGROUND_INTENSITY)  
-        print print_text  
+        print print_text,
         self.reset_color()  
             
     def print_red_text_with_blue_bg(self, print_text):  
         self.set_cmd_color(FOREGROUND_RED | FOREGROUND_INTENSITY| BACKGROUND_BLUE | BACKGROUND_INTENSITY)  
-        print print_text  
+        print print_text,
         self.reset_color()      
 
 
