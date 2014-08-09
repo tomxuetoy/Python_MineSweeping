@@ -7,6 +7,7 @@
 import sys
 import random
 import string
+import CmdColor
 
 class MineSweeping():
     '''扫雷主程序
@@ -167,17 +168,20 @@ class MineSweeping():
         '''
         
         if kind==1:
+            clr = CmdColor.Color()
+            clr.print_red_text('red')
             print '+===================================+'
             print '+             Game Start            +'
             print '+===================================+'
             print '*--0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f--*'
+            print
             for i in range(self.LINE):
                 print '%x  ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ' %(i)
-            print
             print 'Please input values of x,y(0-15):'
         elif kind==2:
             #输出已经清扫位置
             print '*--0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f--*'
+            print
             for i in range(self.LINE):
                 print '%x  ' %(i),
                 for k in range(self.ROW):
@@ -191,6 +195,7 @@ class MineSweeping():
         else:
             #输出所有的地雷与已经清扫位置
             print '*--0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f--*'
+            print
             for i in range(self.LINE):
                 print '%x  ' %(i),
                 for k in range(self.ROW):
