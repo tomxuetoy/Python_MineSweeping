@@ -154,9 +154,9 @@ class MineSweeping():
         '''
         
         self.display(3)
-        print '+======================+'
-        print '+      Game Over       +'
-        print '+======================+'
+        print '+===================================+'
+        print '+             Game Over             +'
+        print '+===================================+'
         print '   Your score is: %d    '%self.SCORE
         
 
@@ -172,27 +172,27 @@ class MineSweeping():
             print '+===================================+'
             print '*--0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f--*'
             for i in range(self.LINE):
-                print i, ' ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ', i
-            print '*--0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f--*'
-            print 'Please input values of x,y(0-7):'
+                print '%x  ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ' %(i)
+            print
+            print 'Please input values of x,y(0-15):'
         elif kind==2:
             #输出已经清扫位置
             print '*--0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f--*'
             for i in range(self.LINE):
-                sys.stdout.write('|  ')
+                print '%x  ' %(i),
                 for k in range(self.ROW):
                     if 2 == self.xy_list[i][k]:
                         sys.stdout.write('0 ')
                     else:
                         sys.stdout.write('? ')
-                print ' ', i
-            print '*--0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f--*'
-            print 'Please input values of x,y(0-7):'           
+                print
+            print
+            print 'Please input values of x,y(0-15):'           
         else:
             #输出所有的地雷与已经清扫位置
-            print '*--0-1-2-3-4-5-6-7--*'
+            print '*--0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f--*'
             for i in range(self.LINE):
-                sys.stdout.write('|  ')
+                print '%x  ' %(i),
                 for k in range(self.ROW):
                     if 2 == self.xy_list[i][k]:
                         sys.stdout.write('0 ')
@@ -200,9 +200,7 @@ class MineSweeping():
                         sys.stdout.write('X ')
                     else:
                         sys.stdout.write('? ')
-                print ' ', i
-            print '*--0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f--*'
-            
+                print
         
 
 if __name__ == '__main__':
