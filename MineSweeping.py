@@ -243,22 +243,22 @@ class Color:
 
     def print_red_text(self, print_text):
         self.set_cmd_color(FOREGROUND_RED | FOREGROUND_INTENSITY)
-        print print_text,
+        sys.stdout.write(print_text)
         self.reset_color()
 
     def print_green_text(self, print_text):
         self.set_cmd_color(FOREGROUND_GREEN | FOREGROUND_INTENSITY)
-        print print_text,
+        sys.stdout.write(print_text)
         self.reset_color()
 
     def print_blue_text(self, print_text):
         self.set_cmd_color(FOREGROUND_BLUE | FOREGROUND_INTENSITY)
-        print print_text,
+        sys.stdout.write(print_text)
         self.reset_color()
 
     def print_red_text_with_blue_bg(self, print_text):
         self.set_cmd_color(FOREGROUND_RED | FOREGROUND_INTENSITY| BACKGROUND_BLUE | BACKGROUND_INTENSITY)
-        print print_text,
+        sys.stdout.write(print_text)
         self.reset_color()
 
 
