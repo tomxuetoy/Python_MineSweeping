@@ -3,5 +3,7 @@
 LIBRARY
 
 EXPORTS
-sayHello  @1
+sayHello		@1
+printColorStr	@2
+printTwinkleStr	@3
     ; Explicit exports can go here

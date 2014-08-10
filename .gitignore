@@ -6,7 +6,6 @@
 !.gitignore
 !README.md
 
-!*.opensdf
 !*.sln
 !*.suo
 !*.rc2
