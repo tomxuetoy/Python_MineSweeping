@@ -1,0 +1,7 @@
+; myHello2.def : Declares the module parameters for the DLL.
+
+LIBRARY
+
+EXPORTS
+sayHello  @1
+    ; Explicit exports can go here
